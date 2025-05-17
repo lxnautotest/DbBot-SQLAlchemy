@@ -9,7 +9,7 @@ license = "Apache License Version 2"
 python = "^3.8"
 SQLAlchemy = "1.4.31"
 loguru = "0.6.0"
-robotframework = "^4.1.2"
+robotframework = "^6.1.1"
 
 [tool.poetry.dev-dependencies]
 

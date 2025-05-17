@@ -111,14 +111,14 @@ class RobotResultsParser(object):
                 'test_run_id': test_run_id,
                 'xml_id': suite.id,
                 'name': suite.name,
-                'source': suite.source,
+                'source': str(suite.source),
                 'doc': suite.doc
             })
         except IntegrityError:
             suite_id = self._db.fetch_id('suites', {
                 'test_run_id': test_run_id,
                 'name': suite.name,
-                'source': suite.source
+                'source': str(suite.source)
             })
         self._parse_suite_status(test_run_id, suite_id, suite)
         self._parse_suites(suite, test_run_id, suite_id)
